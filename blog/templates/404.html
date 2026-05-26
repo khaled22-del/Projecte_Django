@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Error 404</title>
+
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+</head>
+
+<body>
+
+    <div style="text-align:center; padding:100px;">
+
+        <h1>Error 404</h1>
+
+        <h2>Pàgina no trobada</h2>
+
+        <p>
+            El post o la pàgina que busques no existeix.
+        </p>
+
+        <a href="{% url 'starting-page' %}">
+            Tornar a l'inici
+        </a>
+
+    </div>
+
+</body>
+
+</html>
