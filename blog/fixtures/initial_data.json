@@ -96,5 +96,140 @@
       "author": 3,
       "tags": [1, 3]
     }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+      "title": "Intel·ligència Artificial",
+      "excerpt": "La IA està revolucionant el món digital.",
+      "image_name": "post7.jpg",
+      "slug": "intelligencia-artificial",
+      "content": "La intel·ligència artificial permet automatitzar processos i crear aplicacions intel·ligents. Actualment s’utilitza en molts sectors com la salut, el desenvolupament web i l’educació. Python és un dels llenguatges més utilitzats per treballar amb IA gràcies a les seves llibreries avançades.",
+      "date": "2025-05-28",
+      "author": 1,
+      "tags": [1, 2]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 8,
+    "fields": {
+      "title": "Ciberseguretat Web",
+      "excerpt": "La seguretat és essencial en aplicacions web.",
+      "image_name": "post8.jpg",
+      "slug": "ciberseguretat-web",
+      "content": "La ciberseguretat protegeix les dades i els sistemes davant possibles atacs. És important implementar mesures de seguretat en qualsevol aplicació web moderna per protegir la informació dels usuaris.",
+      "date": "2025-05-29",
+      "author": 2,
+      "tags": [2, 3]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 9,
+    "fields": {
+      "title": "Videojocs 2025",
+      "excerpt": "Els videojocs continuen evolucionant.",
+      "image_name": "post9.jpg",
+      "slug": "videojocs-2025",
+      "content": "La indústria gaming continua creixent amb noves consoles, gràfics realistes i competicions eSports. Els videojocs formen part de l’entreteniment digital actual.",
+      "date": "2025-05-30",
+      "author": 3,
+      "tags": [1, 3]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 10,
+    "fields": {
+      "title": "Fitness i Salut",
+      "excerpt": "L'esport és important per la salut.",
+      "image_name": "post10.jpg",
+      "slug": "fitness-salut",
+      "content": "Fer esport regularment ajuda a mantenir una bona salut física i mental. El fitness s’ha convertit en un estil de vida molt popular arreu del món.",
+      "date": "2025-05-31",
+      "author": 1,
+      "tags": [2]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 11,
+    "fields": {
+      "title": "Python Avançat",
+      "excerpt": "Conceptes avançats del llenguatge Python.",
+      "image_name": "post11.jpg",
+      "slug": "python-avancat",
+      "content": "Python és un llenguatge molt utilitzat en desenvolupament web, intel·ligència artificial i automatització. Aprendre conceptes avançats ajuda a crear aplicacions més eficients.",
+      "date": "2025-06-01",
+      "author": 2,
+      "tags": [1]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 12,
+    "fields": {
+      "title": "Spotify i Música",
+      "excerpt": "La música digital domina el mercat.",
+      "image_name": "post12.jpg",
+      "slug": "spotify-musica",
+      "content": "Spotify és una de les plataformes de música més utilitzades actualment. La música en streaming ha canviat la manera de consumir contingut musical.",
+      "date": "2025-06-02",
+      "author": 3,
+      "tags": [3]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 13,
+    "fields": {
+      "title": "Desenvolupament Frontend",
+      "excerpt": "HTML, CSS i JavaScript són essencials.",
+      "image_name": "post13.jpg",
+      "slug": "desenvolupament-frontend",
+      "content": "El frontend és la part visual d'una aplicació web. HTML estructura el contingut, CSS aplica estils i JavaScript afegeix interactivitat.",
+      "date": "2025-06-03",
+      "author": 1,
+      "tags": [2, 3]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 14,
+    "fields": {
+      "title": "eSports Competitius",
+      "excerpt": "Els eSports tenen milions d'espectadors.",
+      "image_name": "post14.jpg",
+      "slug": "esports-competitius",
+      "content": "Els eSports s'han convertit en una indústria molt popular. Competicions internacionals i equips professionals atrauen milions d’espectadors.",
+      "date": "2025-06-04",
+      "author": 2,
+      "tags": [1, 2]
+    }
+  },
+
+  {
+    "model": "blog.post",
+    "pk": 15,
+    "fields": {
+      "title": "Aplicacions Mòbils",
+      "excerpt": "Les apps formen part del nostre dia a dia.",
+      "image_name": "post15.jpg",
+      "slug": "aplicacions-mobils",
+      "content": "Les aplicacions mòbils faciliten moltes tasques quotidianes i permeten accedir a serveis digitals de manera ràpida i eficient.",
+      "date": "2025-06-05",
+      "author": 3,
+      "tags": [2, 3]
+    }
   }
 ]
