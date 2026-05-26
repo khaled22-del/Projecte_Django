@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blog Django
 
 ## Introducció
@@ -178,3 +179,6 @@ Django/
 # Autor
 
 Projecte desenvolupat per Khaled.
+=======
+# Projecte_Django
+>>>>>>> e8515035d93eb4a14fcfd2260040aec1c4bb8d0b
