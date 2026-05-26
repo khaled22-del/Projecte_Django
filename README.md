@@ -1,184 +1,147 @@
-<<<<<<< HEAD
-# Blog Django
+log Django M3-UF6
 
-## Introducció
+Projecte desenvolupat amb Django dins del mòdul de Programació M3-UF6.
 
-Aquest projecte és una aplicació web desenvolupada amb Django dins del mòdul de Programació.
+L'aplicació consisteix en un blog on es poden visualitzar publicacions, autors i etiquetes relacionades.
 
-L’aplicació consisteix en un blog on es poden visualitzar diferents publicacions, consultar informació dels autors i navegar entre etiquetes relacionades amb els posts.
+Funcionalitats
+Mostrar els 3 darrers posts a la portada
+Llistat complet de posts
+Detall de cada post
+Llistat d'autors
+Perfil de cada autor amb els seus posts
+Llistat de tags
+Filtrat de posts per tag
+Panell d'administració amb Django Admin
+Pàgina 404 personalitzada
+Disseny responsive amb CSS
+Tecnologies utilitzades
+Python
+Django
+HTML
+CSS
+SQLite
+Models
+Author
 
-L’objectiu principal del projecte ha estat practicar el funcionament bàsic de Django treballant amb:
+Representa els autors del blog.
 
-- Models
-- Vistes
-- URLs
-- Plantilles HTML
-- Relacions entre taules
-- Bootstrap i CSS
+Camps
+first_name
+last_name
+email
+Tag
 
-També s’ha treballat amb GitHub i documentació automàtica amb Pydoc.
+Representa les etiquetes dels posts.
 
----
+Camps
+caption
+Post
 
-# Documentació Pydoc
+Representa les publicacions del blog.
 
-## Enllaç de la documentació
+Camps
+title
+excerpt
+image_name
+slug
+content
+date
+author
+tags
+Relacions
+Author ↔ Post
 
-https://khaled22-del.github.io/Django/
+Relació One-To-Many:
 
-## Mòduls documentats
+Un autor pot tenir molts posts
+Un post només pot tenir un autor
+author = models.ForeignKey(Author, on_delete=models.CASCADE)
+Post ↔ Tag
 
-- manage.py
-- blog.models
-- blog.views
-- blog.urls
-- blog.apps
-- blog.admin
+Relació Many-To-Many:
 
----
+Un post pot tenir moltes tags
+Una tag pot aparèixer en molts posts
+tags = models.ManyToManyField(Tag)
+Validator utilitzat
 
-# Instal·lació ràpida
+S'ha utilitzat un validator per comprovar que el contingut del post tingui una longitud mínima.
 
-## Clonar el repositori
+content = models.TextField(
+    validators=[MinLengthValidator(10)]
+)
+Vistes principals
+starting_page
 
-```bash
-git clone https://github.com/khaled22-del/Django.git
-```
+Mostra els 3 últims posts.
 
----
+posts
 
-## Entrar a la carpeta del projecte
+Mostra tots els posts ordenats per data.
 
-```bash
-cd Django
-```
+post_detail
 
----
+Mostra el detall d’un post segons el slug.
 
-## Crear un entorn virtual
+authors
 
-### Windows
+Mostra tots els autors.
 
-```bash
-python -m venv venv
-```
+author_detail
 
-### Linux o Mac
+Mostra la informació d’un autor i els seus posts.
 
-```bash
-python3 -m venv venv
-```
+tags
 
----
+Mostra totes les etiquetes.
 
-## Activar l’entorn virtual
+tag_posts
 
-### Windows
+Mostra els posts relacionats amb una tag.
 
-```bash
-venv\Scripts\activate
-```
+Templates
 
-### Linux o Mac
+El projecte utilitza herència de plantilles amb:
 
-```bash
-source venv/bin/activate
-```
+{% extends "base.html" %}
 
----
+També s’utilitzen:
 
-## Instal·lar dependències
+{% include %}
+{% static %}
+{% url %}
+{% for %}
+Admin de Django
 
-```bash
+El projecte utilitza Django Admin per gestionar:
+
+Posts
+Authors
+Tags
+Fixtures
+
+S’utilitzen fixtures per carregar dades inicials.
+
+python manage.py loaddata blog/fixtures/initial_data.json
+Executar el projecte
+Instal·lar dependències
 pip install django
-```
-
----
-
-## Executar migracions
-
-```bash
+Executar migracions
 python manage.py migrate
-```
+Carregar dades inicials
+python manage.py loaddata blog/fixtures/initial_data.json
+Crear superusuari
+python manage.py createsuperuser
+Executar servidor
+python manage.py runserver --insecure
+GitHub
 
----
+Repositori del projecte:
 
-# Execució del projecte
+https://github.com/khaled22-del/Projecte_Django
+Autor
 
-Per executar el servidor localment:
+Khaled Nahal Berraha
 
-```bash
-python manage.py runserver
-```
-
-Després es podrà accedir al projecte des del navegador amb la següent URL:
-
-```text
-http://127.0.0.1:8000/
-```
-
----
-
-# Estructura del projecte
-
-```text
-Django/
-│
-├── blog/
-│   ├── migrations/
-│   ├── static/
-│   ├── templates/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── urls.py
-│   └── views.py
-│
-├── my_site/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-│
-├── docs/
-├── .github/
-│   └── workflows/
-│       └── docs.yml
-│
-├── generate_docs.py
-├── manage.py
-└── README.md
-```
-
----
-
-# Funcionalitats principals
-
-- Creació i visualització de posts
-- Relació entre autors i publicacions
-- Sistema d’etiquetes
-- Panell d’administració de Django
-- Navegació entre pàgines
-- Documentació automàtica amb Pydoc
-- Publicació automàtica amb GitHub Pages
-
----
-
-# Tecnologies utilitzades
-
-- Python
-- Django
-- HTML
-- CSS
-- Bootstrap
-- GitHub Actions
-- GitHub Pages
-- Pydoc
-
----
-
-# Autor
-
-Projecte desenvolupat per Khaled.
-=======
-# Projecte_Django
->>>>>>> e8515035d93eb4a14fcfd2260040aec1c4bb8d0b
+M3-UF6 — Desenvolupament Web amb Django
