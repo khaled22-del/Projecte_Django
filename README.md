@@ -86,3 +86,156 @@ author = models.ForeignKey(
     Author,
     on_delete=models.CASCADE
 )
+```
+
+---
+
+## Post ↔ Tag
+
+Relació Many-To-Many:
+
+- Un post pot tenir moltes tags
+- Una tag pot aparèixer en molts posts
+
+```python
+tags = models.ManyToManyField(Tag)
+```
+
+---
+
+# Validator utilitzat
+
+S'ha utilitzat un validator per comprovar que el contingut del post tingui una longitud mínima.
+
+```python
+content = models.TextField(
+    validators=[MinLengthValidator(10)]
+)
+```
+
+---
+
+# Vistes principals
+
+## starting_page
+
+Mostra els 3 últims posts.
+
+## posts
+
+Mostra tots els posts ordenats per data.
+
+## post_detail
+
+Mostra el detall d’un post segons el slug.
+
+## authors
+
+Mostra tots els autors.
+
+## author_detail
+
+Mostra la informació d’un autor i els seus posts.
+
+## tags
+
+Mostra totes les etiquetes.
+
+## tag_posts
+
+Mostra els posts relacionats amb una tag.
+
+---
+
+# Templates
+
+El projecte utilitza herència de plantilles amb:
+
+```html
+{% extends "base.html" %}
+```
+
+També s’utilitzen:
+
+- `{% include %}`
+- `{% static %}`
+- `{% url %}`
+- `{% for %}`
+
+---
+
+# Admin de Django
+
+El projecte utilitza Django Admin per gestionar:
+
+- Posts
+- Authors
+- Tags
+
+---
+
+# Fixtures
+
+S’utilitzen fixtures per carregar dades inicials.
+
+```bash
+python manage.py loaddata blog/fixtures/initial_data.json
+```
+
+---
+
+# Executar el projecte
+
+## Instal·lar dependències
+
+```bash
+pip install django
+```
+
+---
+
+## Executar migracions
+
+```bash
+python manage.py migrate
+```
+
+---
+
+## Carregar dades inicials
+
+```bash
+python manage.py loaddata blog/fixtures/initial_data.json
+```
+
+---
+
+## Crear superusuari
+
+```bash
+python manage.py createsuperuser
+```
+
+---
+
+## Executar servidor
+
+```bash
+python manage.py runserver --insecure
+```
+
+---
+
+# GitHub
+
+Repositori del projecte:
+
+https://github.com/khaled22-del/Projecte_Django
+
+---
+
+# Autor
+
+Khaled Nahal Berraha
+
+M3-UF6 — Desenvolupament Web amb Django
